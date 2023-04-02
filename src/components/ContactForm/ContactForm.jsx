@@ -25,7 +25,7 @@ export const ContactForm = () => {
     if (contacts.find(item => item.number === number)) {
       return alert('Sorry, this number already exist');
     }
-    dispatch(addContact(data));
+    dispatch(addContact({ name, number }));
     reset();
   };
 
